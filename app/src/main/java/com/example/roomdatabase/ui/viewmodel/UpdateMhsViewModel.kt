@@ -26,7 +26,13 @@ class UpdateMhsViewModel(
             updateUIState = repositoryMhs.getMhs(_nim)
                 .filterNotNull()
                 .first()
-                .
+                .toUIStateMhs()
         }
+    }
+
+    fun updateState(mahasiswaEvent: MahasiswaEvent){
+        updateUIState = updateUIState.copy(
+            mahasiswaEvent = mahasiswaEvent,
+        )
     }
 }
