@@ -1,16 +1,16 @@
 package com.example.roomdatabase.ui.viewmodel
 
 import com.example.roomdatabase.data.entity.Mahasiswa
-import com.example.roomdatabase.repository.LocalRepositoryMhs
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.roomdatabase.repository.RepositoryMhs
 import kotlinx.coroutines.launch
 
 
-class MahasiswaViewModel(private val repositoryMhs: LocalRepositoryMhs) : ViewModel() {
+class MahasiswaViewModel(private val repositoryMhs: RepositoryMhs) : ViewModel() {
     var uiState by mutableStateOf(MhsUiState())
 
     // Memperbarui state berdasarkan input pengguna
