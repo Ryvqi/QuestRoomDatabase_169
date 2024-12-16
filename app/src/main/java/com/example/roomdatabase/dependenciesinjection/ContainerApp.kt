@@ -1,7 +1,7 @@
 package com.example.roomdatabase.dependenciesinjection
 
 import android.content.Context
-import com.example.roomdatabase.database.KrsDatabase
+import com.example.roomdatabase.data.database.KrsDatabase
 import com.example.roomdatabase.repository.LocalRepositoryMhs
 import com.example.roomdatabase.repository.RepositoryMhs
 

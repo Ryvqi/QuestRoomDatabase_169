@@ -1,6 +1,6 @@
 package com.example.roomdatabase.ui.viewmodel
 
-import com.example.roomdatabase.entity.Mahasiswa
+import com.example.roomdatabase.data.entity.Mahasiswa
 import com.example.roomdatabase.repository.LocalRepositoryMhs
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
