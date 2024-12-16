@@ -35,4 +35,18 @@ class UpdateMhsViewModel(
             mahasiswaEvent = mahasiswaEvent,
         )
     }
+
+    fun  validateFields(): Boolean {
+        val event = updateUIState.mahasiswaEvent
+        val errorState = MahasiswaViewModel.FormErrorState(
+            nim = if (event.nim.isNotEmpty()) null else "NIM tidak boleh kosong",
+            nama = if (event.nama.isNotEmpty()) null else "Nama tidak boleh kosong",
+            jeniskelamin = if (event.jenisKelamin.isNotEmpty()) null else "Jenis Kelamin tidak boleh kosong",
+            alamat = if (event.alamat.isNotEmpty()) null else "Alamat tidak boleh kosong",
+            kelas = if (event.kelas.isNotEmpty()) null else "Kelas tidak boleh kosong",
+            angkatan = if (event.angkatan.isNotEmpty()) null else "Angkatan tidak boleh kosong",
+        )
+        updateUIState = updateUIState.copy(isEntityValid = errorState)
+        return errorState.isValid()
+    }
 }
