@@ -68,7 +68,7 @@ data class DetailUiState(
 ){
     val isUiEmpty: Boolean
         get() = detailUiEvent == MahasiswaEvent()
-    val isUiNotEmpty: Boolean
+    val isUiEventNotEmpty: Boolean
         get() = detailUiEvent != MahasiswaEvent()
 }
 
